@@ -1,9 +1,53 @@
-import React from 'react'
+// Imports
+import { useState, useEffect } from 'react'
+// Material UI
+import { Box, Stack, Typography } from '@mui/material'
+// Components
+import { Videos, Sidebar } from './'
 
 const Feed = () => {
-  return (
-    <div>Feed</div>
-  )
+   return (
+      <Stack
+         sx={{ flexDirection: { sx: 'column', md: 'row' } }}
+      >
+         <Box
+            sx={{
+               height: { sx: 'auto', md: '92vh' },
+               borderRight: '1px solid #3d3d3d',
+               px: { sx: 0, md: 2 },
+            }}
+         >
+            <Sidebar />
+            <Typography
+               className='copyright'
+               variant='body2'
+               sx={{ mt: 1.5, color: '#fff' }}
+            >
+               Copyright 2022 Youtube 2.0
+            </Typography>
+         </Box>
+         <Box
+            p={2}
+            sx={{
+               overFlowY: 'auto',
+               height: '90vh',
+               flex: 2,
+            }}
+         >
+            <Typography
+               variant='h4'
+               fontWeight='bold'
+               sx={{ color: '#fff' }}
+            >
+               New{' '}
+               <span style={{ color: '#fc1503' }}>
+                  Videos
+               </span>
+            </Typography>
+            <Videos videos={[]} />
+         </Box>
+      </Stack>
+   )
 }
 
 export default Feed
