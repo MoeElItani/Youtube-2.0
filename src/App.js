@@ -1,17 +1,16 @@
-// Material UI
 import {
    BrowserRouter,
    Routes,
    Route,
 } from 'react-router-dom'
 import { Box } from '@mui/material'
-// Components
+
 import {
+   ChannelDetail,
+   VideoDetail,
+   SearchFeed,
    Navbar,
    Feed,
-   VideoDetail,
-   ChannelDetail,
-   SearchFeed,
 } from './components'
 
 const App = () => (
@@ -19,7 +18,7 @@ const App = () => (
       <Box sx={{ backgroundColor: '#000' }}>
          <Navbar />
          <Routes>
-            <Route path='/' exact element={<Feed />} />
+            <Route exact path='/' element={<Feed />} />
             <Route
                path='/video/:id'
                element={<VideoDetail />}
