@@ -10,7 +10,7 @@ import {
 } from '@mui/material'
 import { CheckCircle } from '@mui/icons-material'
 
-const ChannelCard = ({ channelDetail }) => {
+const ChannelCard = ({ channelDetail, marginTop }) => {
    return (
       <Box
          sx={{
@@ -21,6 +21,8 @@ const ChannelCard = ({ channelDetail }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            margin: 'auto',
+            marginTop,
          }}
       >
          <Link

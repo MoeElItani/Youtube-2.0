@@ -62,7 +62,10 @@ const Feed = () => {
                </span>
             </Typography>
 
-            <Videos videos={videos} />
+            <Videos
+               videos={videos}
+               justifyContent='start'
+            />
          </Box>
       </Stack>
    )
