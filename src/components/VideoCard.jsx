@@ -28,7 +28,7 @@ const VideoCard = ({
             width: {
                xs: '353px',
                sm: '95.9vw',
-               md: '150px',
+               md: '417px',
             },
             boxShadow: 'none',
             borderRadius: '0',
@@ -49,9 +49,13 @@ const VideoCard = ({
                   width: {
                      sx: '44vw',
                      sm: '96vw',
-                     md: '22vw',
+                     md: '27.2vw',
                   },
-                  height: 180,
+                  height: {
+                     xs: '24vh',
+                     sm: '60vh',
+                     md: '32vh',
+                  },
                }}
             ></CardMedia>
          </Link>
